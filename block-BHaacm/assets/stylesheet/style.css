@@ -1,0 +1,311 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* General style */
+:root {
+  --primery: rgb(34, 41, 70);
+  --secondary: rgb(55, 182, 103);
+  --tertiary: rgb(233, 236, 252);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+html {
+  font-size: 1rem;
+}
+body {
+  font-family: "Merriweather", serif;
+  line-height: 1.5;
+}
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+/* Flex */
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.item-center {
+  align-items: center;
+}
+ul {
+  list-style-type: none;
+}
+/* Columns */
+.flex-48 {
+  flex: 0 1 48%;
+}
+.flex-30 {
+  flex: 0 1 30%;
+}
+.width-full {
+  width: 100%;
+}
+.padding {
+  padding: 3.5rem 0;
+}
+/* header */
+.header {
+  background-color: var(--primery);
+  padding: 0.7rem 0;
+}
+/* .navbar {
+  padding: 0;
+} */
+.nav a {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  padding-left: 1.5rem;
+  font-size: 1.2rem;
+}
+.blog a {
+  color: var(--secondary);
+}
+/* Hero Section  */
+.hero-section {
+  background-color: var(--tertiary);
+  padding: 2rem;
+}
+.hero-article {
+  padding: 2rem 2rem;
+}
+h1 {
+  font-size: 2.3rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.hero-article p {
+  padding: 0.5rem 0;
+  font-family: "Roboto", sans-serif;
+  color: rgb(108, 107, 107);
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  background-color: var(--secondary);
+  margin-top: 0.7rem;
+  border-radius: 0.3rem;
+  border: none;
+}
+.btn a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  color: white;
+}
+/* Blog-section */
+h2 {
+  font-size: 2.3rem;
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 1.5rem;
+  text-transform: capitalize;
+}
+img {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+h3 {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.blog-article p {
+  padding: 0.3rem 0;
+  color: rgb(108, 107, 107);
+  font-family: "Roboto", sans-serif;
+}
+/* Footer */
+footer {
+  background-color: var(--primery);
+}
+.footer {
+  padding: 1.5rem 2.5rem;
+}
+footer small {
+  padding: 0.5rem;
+  color: #bcc0d2;
+  text-transform: capitalize;
+}
+.footer-nav a {
+  font-family: "Roboto", sans-serif;
+  padding: 0.5rem;
+  color: #bcc0d2;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .flex {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .flex-48,
+  .flex-30 {
+    flex: 1 1 100%;
+    margin: 1rem 0;
+  }
+  .column {
+    flex-direction: column;
+  }
+  .nav {
+    margin: 1rem 1rem;
+  }
+  .nav a {
+    font-size: 1.5rem;
+  }
+  .hero-section {
+    padding: 0;
+  }
+  .hero-article {
+    flex-direction: column-reverse;
+  }
+  .hero-img {
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  h2 {
+    padding: 0;
+  }
+  .padding {
+    padding: 2.5rem;
+  }
+}

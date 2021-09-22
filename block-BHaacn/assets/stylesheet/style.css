@@ -1,0 +1,734 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* General style */
+:root {
+  --primery: rgb(249, 35, 77);
+  --secondary: rgb(223, 236, 255);
+  --tertiary: rgb(35, 52, 123);
+  --quaternary: rgb(16, 33, 105);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+html {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+body {
+  font-family: "Nunito", sans-serif;
+  line-height: 1.4;
+}
+.container {
+  max-width: 1370px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+/* Flex */
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.item-center {
+  align-items: center;
+}
+ul {
+  list-style-type: none;
+}
+/* columns */
+.flex-48 {
+  flex: 0 1 48%;
+}
+.flex-30 {
+  flex: 0 1 30%;
+}
+.flex-31-1 {
+  flex: 0 1 31.1%;
+}
+.flex-25 {
+  flex: 0 1 25%;
+}
+
+.width-full {
+  width: 100%;
+}
+.padding {
+  padding: 3.5rem 0;
+}
+/* header */
+.header {
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  background: url(../media/banner.png);
+  background-size: 100% 100%;
+}
+#toggle {
+  display: none;
+}
+.bars {
+  display: none;
+}
+.navbar {
+  padding: 1rem 0;
+}
+.brand-name a {
+  color: white;
+  font-size: 2.2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.btn-top a:hover {
+  color: var(--primery);
+}
+.btn-top {
+  margin-left: 2.5rem;
+}
+ul a {
+  font-size: 1.2rem;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.btn-join {
+  border-radius: 5px;
+  padding: 0.6rem 2rem;
+  background-color: var(--primery);
+  border: none;
+  margin-left: 2.5rem;
+}
+.btn-join:hover {
+  background-color: rgb(192, 15, 50);
+}
+.btn-join a {
+  text-transform: capitalize;
+  font-family: "Nunito", sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+/* hero-section */
+.hero-article {
+  padding: 0;
+}
+.hero-section h1 {
+  font-family: "Nunito", sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 2.5rem;
+  text-transform: capitalize;
+}
+h1 strong {
+  color: var(--primery);
+}
+.hero-section p {
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  /* padding-bottom: 1.5rem; */
+  color: white;
+}
+.btn-regester,
+.btn-about {
+  margin-left: 0;
+}
+.hero-img img {
+  width: 100%;
+  padding: 3rem 0 3rem 35%;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: rgba(45, 26, 189, 0.7);
+}
+/* About-section */
+/* h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+} */
+.about-article {
+  padding: 5rem 0;
+}
+.about-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-heading h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: black;
+}
+.about-heading p {
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+.btn-about {
+  margin-left: 0;
+}
+.btn-about a {
+  font-size: 1.3rem;
+}
+/* Join-section */
+.join-section {
+  background-color: var(--secondary);
+}
+.join-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  position: absolute;
+  top: -2rem;
+  left: 2.1rem;
+  height: 3rem;
+  background-color: var(--secondary);
+}
+.join-number h2 {
+  color: var(--primery);
+  font-size: 1.5rem;
+}
+.join-heading h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: capitalize;
+  padding-top: 3rem;
+  text-align: center;
+  color: black;
+}
+.join-article-box {
+  padding: 2.5rem 0;
+}
+.join-section article {
+  padding: 1rem;
+}
+.join-article {
+  position: relative;
+  padding: 1.7rem;
+  border: 0.1rem dashed var(--primery);
+}
+.join-article h2 {
+  padding-top: 0.7rem;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 800;
+}
+.join-article p {
+  color: rgb(78, 78, 79);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+/* Schedule-section */
+.schedule-section {
+  padding: 4.5rem;
+}
+.schedule-relative {
+  position: relative;
+}
+.schedule-heading h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+  padding-bottom: 1.7rem;
+  text-transform: capitalize;
+}
+.verticle-line {
+  width: 1rem;
+  height: 43.5rem;
+  left: 6.15rem;
+  z-index: -1;
+  position: absolute;
+  border-left: 0.1rem dashed var(--primery);
+}
+.date-circle {
+  width: 8.7rem;
+  height: 8.7rem;
+  border-radius: 50%;
+  padding: 4rem;
+  display: flex;
+  background-color: white;
+  color: var(--primery);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 0.1rem dashed var(--primery);
+}
+.sept {
+  background-color: var(--primery);
+  color: white;
+}
+.schedule-col1 {
+  width: 20%;
+}
+.schedule-col2 {
+  width: 20%;
+}
+.schedule-col3 {
+  width: 60%;
+}
+.schedule-article {
+  padding-bottom: 3rem;
+}
+.schedule-article img {
+  max-width: 12.5rem;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+}
+.schedule-article h2 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.schedule-article p {
+  color: rgb(78, 78, 79);
+  font-size: 1.1rem;
+}
+.schedule-bottom {
+  padding-bottom: 0;
+}
+.btn-schedule-div {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+.btn-schedule {
+  border-radius: 5px;
+  padding: 0.75rem 2rem;
+  background-color: var(--primery);
+  border: none;
+}
+.btn-schedule:hover {
+  background-color: rgb(192, 15, 50);
+}
+.btn-schedule a {
+  font-family: "Nunito", sans-serif;
+  color: white;
+  font-size: 1.1rem;
+}
+/* Idea-section */
+.idea-section {
+  background-color: var(--secondary);
+}
+.idea-article {
+  padding: 3rem 0;
+}
+.idea-section h2 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.idea-article p {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+}
+.padding {
+  padding: 1rem 0;
+}
+.topic {
+  color: white;
+  border: 1px solid red;
+  border-radius: 5px;
+  background-color: var(--primery);
+}
+/* Video-section */
+.video-section {
+  padding: 4rem 0;
+}
+.video-section img {
+  width: 100%;
+  border-radius: 20px;
+}
+.video-article {
+  position: relative;
+}
+.video-img {
+  border-radius: 0.5rem;
+}
+.play-btn {
+  position: absolute;
+  top: 39%;
+  left: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 50%;
+  background-color: white;
+}
+.play-btn a {
+  font-size: 3rem;
+  color: var(--primery);
+}
+
+/* News section */
+.news-section {
+  padding: 3rem;
+  background-color: var(--secondary);
+}
+.news-heading {
+  text-align: center;
+}
+.news-section h3 {
+  padding: 0.5rem 0 0.5rem 0;
+  font-size: 3rem;
+  font-weight: 800;
+  padding-bottom: 3rem;
+  text-transform: capitalize;
+  color: black;
+}
+.news-article-box {
+  padding-bottom: 4rem;
+}
+.news-article h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding: 0.6rem 0;
+}
+.news-article p {
+  color: rgb(78, 78, 79);
+}
+.btn-read-more {
+  border: none;
+  margin-top: 1rem;
+}
+.btn-read-more a {
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: black;
+  font-family: "Nunito", sans-serif;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+.red a {
+  color: var(--primery);
+}
+/* footer section */
+.footer-section {
+  padding: 2.5rem;
+  background-color: var(--tertiary);
+}
+.footer-section section {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-col1 {
+  width: 30%;
+}
+.footer-col2 {
+  width: 34%;
+}
+.footer-col3 {
+  width: 30%;
+}
+.footer-section h3 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding-bottom: 0.7rem;
+  text-transform: capitalize;
+}
+.footer-section a {
+  color: rgb(188, 192, 210);
+  text-transform: capitalize;
+  padding-right: 1rem;
+}
+.footer-nav a {
+  color: rgb(169, 171, 180);
+}
+.footer-social a {
+  font-size: 1.2rem;
+}
+.footer-small {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--quaternary);
+}
+.footer-small small {
+  color: rgb(169, 171, 180);
+}
+/* Media quiery */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 1rem;
+  }
+  .flex {
+    flex-wrap: wrap;
+  }
+  .flex-25,
+  .flex-30,
+  .flex-31-1,
+  .flex-48 {
+    flex: 1 1 100%;
+  }
+  .column {
+    flex-direction: column;
+  }
+  .header {
+    height: 200vh;
+  }
+  .navbar {
+    padding: 2rem 3rem 0;
+  }
+  .brand-name a {
+    left: 52px;
+    top: 16px;
+    z-index: 99;
+  }
+  .nav {
+    display: none;
+  }
+  .nav li {
+    margin: 1rem 0;
+  }
+  #toggle:checked ~ .nav {
+    display: inline-block;
+  }
+  .bars {
+    font-size: 2.2rem;
+    color: white;
+    right: 52px;
+    top: 16px;
+    z-index: 99;
+    display: block;
+  }
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(45, 26, 189, 0.5);
+    padding-top: 120px;
+  }
+  .padding {
+    padding: 4rem 0;
+  }
+  .hero-article {
+    flex-direction: column-reverse;
+  }
+  .hero-img {
+    width: 100%;
+  }
+  .hero-img img {
+    padding: 2.5rem;
+  }
+  .hero-heading {
+    padding: 0 3rem;
+  }
+  .btn-join {
+    margin-left: 0;
+  }
+  .about-heading h1 {
+    padding-top: 1rem;
+  }
+  .about-heading p {
+    padding-bottom: 0.7rem;
+  }
+  .about-article {
+    padding: 3rem;
+  }
+  .join-article-box {
+    padding: 3rem;
+  }
+  .idea-article {
+    padding: 3rem;
+  }
+  .news-section {
+    padding: 0 2rem;
+  }
+  .news-section h3 {
+    padding: 3rem;
+  }
+  .btn-read-more {
+    margin-top: 1rem;
+    padding-bottom: 4rem;
+  }
+  .play-btn {
+    width: 5rem;
+    height: 5rem;
+  }
+  .play-btn a {
+    font-size: 1.5rem;
+  }
+  .verticle-line {
+    top: 6rem;
+    left: 6.29rem;
+    height: 114rem;
+  }
+  .schedule-article {
+    margin-bottom: 4rem;
+  }
+  .schedule-article img {
+    max-width: 28.5rem;
+  }
+  .schedule-section {
+    padding: 4.5rem 0;
+  }
+  .schedule-section h2 {
+    padding-top: 1rem;
+  }
+  .schedule-col2 {
+    width: 72%;
+  }
+  .schedule-col3 {
+    width: 68%;
+    margin-left: 13rem;
+  }
+  .news-article h2 {
+    font-size: 1.7rem;
+  }
+  .footer-section section .flex {
+    display: flex;
+    justify-content: space-between;
+  }
+}
